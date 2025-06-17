@@ -3,66 +3,74 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   font-family: system-ui, sans-serif;
-  background: #fdfdfd;
-  color: #222;
-  line-height: 1.6;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
-.header {
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
 }
-.logo {
-  font-size: 24px;
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 24px;
-  flex-wrap: wrap;
-}
-.hero .text {
-  max-width: 600px;
-  font-size: 32px;
-}
-.hero .cta {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 12px 24px;
-  background: #2a4df2;
+header nav a {
+  margin-left: 1.5rem;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  font-weight: 500;
 }
-.hero .image img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-}
-.partners {
+main {
+  flex-grow: 1;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background: #f6f6f6;
-  padding: 40px 24px;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
 }
-.partner {
-  text-align: center;
-  margin: 10px 20px;
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
-.partner span {
+main .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3390ff;
+  text-decoration: none;
   font-weight: bold;
-  display: block;
-  font-size: 20px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+footer img {
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 1.8rem;
+  }
+  footer {
+    gap: 1rem;
+  }
+  footer img {
+    height: 24px;
+  }
 }
