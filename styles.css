@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
-  font-family: system-ui, sans-serif;
-  background: url('background.png') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
+  background-color: black;
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* <-- это ключ */
 }
 .overlay {
   display: flex;
