@@ -43,8 +43,9 @@ main {
   max-width: 600px;
 }
 main h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 3vw;
+  backdrop-filter: blur(3px);
 }
 main .cta {
   display: inline-block;
