@@ -12,6 +12,15 @@ html, body {
   overflow: hidden;
 }
 
+.person {
+  width: 100%;
+  max-width: 500px;
+  height: 60vh;
+  background-image: url('background.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .container {
   display: flex;
   flex-direction: column;
